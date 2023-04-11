@@ -45,7 +45,7 @@ so if you print employees[1].generate() more than once each time it will give yo
 Employee.prototype.salary = function () {
     let ranInt = randomIntFromInterval(this.min,this.max)
     // console.log(ranInt)
-        this.taxedSalary = ranInt - 0.75*ranInt
+        this.taxedSalary = Math.floor(ranInt - .075*ranInt)
     }
     
     let Ghazi = new Employee(1000, "Ghazi", "Samer", "Administration", "senior", "", 1500, 2000)
