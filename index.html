@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div>
+        <div class="hero">
+            <h1> Employees <span>page</span></h1>
             <nav>
-                <ul>
+                <ul class="unorderd">
                     <li>home</li>
                     <li><a href="./accounting.html">accounting</a></li>
                     <li>contact us</li>
@@ -18,9 +20,49 @@
             </nav>
         </div>
     </header>
-    <main></main>
+    <main>
+        <section>
+        <form id="employeeForm" action="">
+            <fieldset>
+                <label for="">full name</label>
+                <input id="fullName" type="text">
+                <br>
+                <label for="">choose department</label>
+                <select name="select" id="select">
+                   <optgroup>
+                       <option>Administration</option>
+                       <option>Marketing</option>
+                       <option>Development</option>
+                       <option>Finance</option>
+                       
+                    </optgroup>
+                    
+                </select>
+                <br>
+                <label for="">Level</label>
+                <select name="level" id="level">
+                    <optgroup>
+                        <option>Junior</option>
+                        <option>Mid-Senior</option>
+                        <option>Senior</option>
+                        
+                    </optgroup>
+                </select>
+                <br>
+                <label for="">Image</label>
+                <input id="image" name="image" type="text">
+                <br>
+                <button id="btn" type="submit">submit</button>
+            </fieldset>
+        </form>
+        </section>
+        <section id="employeeSection">
+        </section>
+
+        
+    </main>
     <footer>
-        <div>&copy; all rights reserved</div>
+        <div class="all-rights">&copy; all rights reserved</div>
         <div>
             <ul>
                 <li>facebook</li>
@@ -29,6 +71,7 @@
             </ul>
         </div>
     </footer>
-    <script src="./app.js"></script>
+    <!-- <script src="./app.js"></script> -->
+    <script src="./main.js"></script>
 </body>
 </html>
