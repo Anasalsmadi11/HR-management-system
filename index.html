@@ -18,7 +18,46 @@
             </nav>
         </div>
     </header>
-    <main></main>
+    <main>
+        <section>
+        <form id="employeeForm" action="">
+            <fieldset>
+                <label for="">full name</label>
+                <input id="fullName" type="text">
+                <br>
+                <label for="">choose department</label>
+                <select name="select" id="select">
+                   <optgroup>
+                       <option>Administration</option>
+                       <option>Marketing</option>
+                       <option>Development</option>
+                       <option>Finance</option>
+                       
+                    </optgroup>
+                    
+                </select>
+                <br>
+                <label for="">Level</label>
+                <select name="level" id="level">
+                    <optgroup>
+                        <option>Junior</option>
+                        <option>Mid-Senior</option>
+                        <option>Senior</option>
+                        
+                    </optgroup>
+                </select>
+                <br>
+                <label for="">Image</label>
+                <input id="image" name="image" type="text">
+                <br>
+                <button id="btn" type="submit">submit</button>
+            </fieldset>
+        </form>
+        </section>
+        <section id="employeeSection">
+
+        </section>
+    </main>
     <footer>
         <div>&copy; all rights reserved</div>
         <div>
@@ -29,6 +68,7 @@
             </ul>
         </div>
     </footer>
+   <!-- <script src="/main.js"></script> -->
     <script src="./app.js"></script>
 </body>
 </html>
