@@ -10,21 +10,54 @@ let employees = []
 // console.log(employees) /// if you put this here the array will be empty because it will console it then push the objects that i submitted below
 
 // its not mandotory to give a value to constructor param
-function Employee(id, fullName, department, level, image, min, max) {
-    this.id = id;
+function Employee(id, fullName, department, level, image,salary) {
     this.flName = fullName;
     this.department = department;
     this.level = level;
     this.imge = image;
-    // this.min = min; // uncomment this and go the console you will see it inside the objects array as undifind like this(/*department:"Development",flName:"Emma Jhones",id:1002,imge:undefined,level:"Senior",min:undefined */)
-
-    // this.max = max;
+    this.salary = salary
+    this.id = id;
     employees.push(this);
+    
 }
 
-Employee.prototype.getRandomId = function (min, max) {
+
+myForm.addEventListener("submit", eventHandler)
+function eventHandler(event) {
+    event.preventDefault()
+
+    let fullName = event.target.fullName.value
+    console.log(fullName)
+    // console.log(this.fullName) // it will print you( <input name="fullName" id="fullName" type="text">)
+    
+    let department = event.target.select.value
+    console.log(department)
+    let level = event.target.level.value
+    console.log(level)
+    let image = event.target.image.value
+    
+    const newEmployee = new Employee(fullName, department ,level ,image) // the order is very important in the object parameters here
+    newEmployee.randomId(1000,1010)
+if(level =="Senior"){
+    newEmployee.randomSalary(1500,2000)
+}else if(level == "Mid-senior"){
+    newEmployee.randomSalary(1000,1500)
+}else if(level == "Junior"){
+    newEmployee.randomSalary(500,1000)
+}
+    newEmployee.render()
+    saveData(employees)
+console.log(newEmployee)
+}
+
+
+Employee.prototype.randomId = function (min, max) {
     this.id = Math.floor(Math.random() * (max - min + 1) + min)
 
+}
+Employee.prototype.randomSalary = function (min, max) {
+   let randomInt = Math.floor(Math.random() * (max - min + 1) + min)
+    this.salary =  randomInt - .075*randomInt
 }
 
 Employee.prototype.render = function () {
@@ -51,30 +84,8 @@ Employee.prototype.render = function () {
         idEl.textContent = `id: ${this.id}`
         employeesSectionEl.appendChild(idEl)
 }
-// function handle(){
-//     let imag = document.createElement("img")
-//     imag.src = './assets/Captureee.png'
-//     employeesSectionEL.appendChild(imag)
-// }
-// handle()
 
-myForm.addEventListener("submit", eventHandler)
-function eventHandler(event) {
-    event.preventDefault()
-
-    let image = event.target.image.value
-
-    let fullName = event.target.fullName.value
-    console.log(fullName)
-
-    let department = event.target.select.value
-    console.log(department)
-    let level = event.target.level.value
-
-    let newEmployee = new Employee(image,fullName, department, level)
-    newEmployee.getRandomId(1000,1010)
-    // employees.push(newEmployee)
-    newEmployee.render()
-console.log(employees)
-
+function saveData(data){
+    let stringifyData = JSON.stringify(data);
+    localStorage.setItem("employee", stringifyData);
 }
