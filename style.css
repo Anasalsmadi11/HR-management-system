@@ -73,3 +73,8 @@ ul{
 .all-rights{
     font-size: 22px;
 }
+
+
+table,th,td{
+    border: 1px solid black;
+}
