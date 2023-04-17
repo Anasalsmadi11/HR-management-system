@@ -1,75 +1,102 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <div class="hero">
-            <h1> Employees <span>page</span></h1>
-            <nav>
-                <ul class="unorderd">
-                    <li>home</li>
-                    <li><a href="./accounting.html">accounting</a></li>
-                    <li>contact us</li>
-                </ul>
-            </nav>
-        </div>
+      <div class="hero">
+        <h1>Employees <span>page</span></h1>
+        <nav>
+          <ul class="unorderd">
+            <li>home</li>
+            <li><a href="./accounting.html">accounting</a></li>
+            <li>contact us</li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
-        <section>
+      <!-- <table id="table">
+        <tr>
+          <th>Department</th>
+          <th># Employees</th>
+          <th>Total salary</th>
+          <th>average</th>
+        </tr>
+        <tr></tr>
+        <tr id="trEl1">
+          <td>Administration</td>
+        </tr>
+        <tr id="trEl2">
+          <td>Marketing</td>
+        </tr>
+        <tr id="trEl3">
+          <td>Finance</td>
+        </tr>
+        <tr id="trEl4">
+          <td>
+            Development
+          </td>
+        </tr>
+        <tr id="tFooter">
+          <td>Total</td>
+        </tr>
+      </table> -->
+
+      <section>
         <form id="employeeForm" action="">
-            <fieldset>
-                <label for="">full name</label>
-                <input id="fullName" type="text">
-                <br>
-                <label for="">choose department</label>
-                <select name="select" id="select">
-                   <optgroup>
-                       <option>Administration</option>
-                       <option>Marketing</option>
-                       <option>Development</option>
-                       <option>Finance</option>
-                       
-                    </optgroup>
-                    
-                </select>
-                <br>
-                <label for="">Level</label>
-                <select name="level" id="level">
-                    <optgroup>
-                        <option>Junior</option>
-                        <option>Mid-Senior</option>
-                        <option>Senior</option>
-                        
-                    </optgroup>
-                </select>
-                <br>
-                <label for="">Image</label>
-                <input id="image" name="image" type="text">
-                <br>
-                <button id="btn" type="submit">submit</button>
-            </fieldset>
+          <fieldset>
+            <legend>add new Employee</legend>
+            <label for="">Employee Name:</label>
+            <input type="text" id="fName" name="fullName" />
+            <label for="">choose department</label>
+            <select name="select" id="select">
+              <optgroup>
+                <option>Administration</option>
+                <option>Marketing</option>
+                <option>Development</option>
+                <option>Finance</option>
+              </optgroup>
+            </select>
+            <br />
+            <label for="">choose level</label>
+            <select name="level" id="level">
+              <optgroup>
+                <option>Senior</option>
+                <option>Mid-senior</option>
+                <option>Junior</option>
+              </optgroup>
+            </select>
+            <br />
+            <label for="">Image</label>
+            <input name="image" id="image" type="text" />
+            <br />
+            <button id="btn" type="submit">submit</button>
+          </fieldset>
         </form>
-        </section>
-        <section id="employeeSection">
-         </section>
+
+      </section>
+      <section id="employeeSection"></section>
+
     </main>
     <footer>
-        <div class="all-rights">&copy; all rights reserved</div>
-        <div>
-            <ul>
-                <li>facebook</li>
-                <li>twitter</li>
-                <li>Linkden</li>
-            </ul>
-        </div>
+      <div class="all-rights">&copy; all rights reserved</div>
+      <div>
+        <ul>
+          <li>facebook</li>
+          <li>twitter</li>
+          <li>Linkden</li>
+        </ul>
+      </div>
     </footer>
-    <!-- <script src="./app.js"></script> -->
     <script src="./main.js"></script>
-</body>
+
+
+  </body>
 </html>
