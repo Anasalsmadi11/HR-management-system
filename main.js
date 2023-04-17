@@ -10,7 +10,10 @@ let employees = []
 // console.log(employees) /// if you put this here the array will be empty because it will console it then push the objects that i submitted below
 
 // its not mandotory to give a value to constructor param
-function Employee(id, fullName, department, level, image, min, max) {
+function Employee( fullName,image, department, level, id,min, max) {
+  /*very important note: matching the orderingof parameters between constructor and newEmployee parameters is sooooo important oterwise it will give false value(try console the newEmployee to see) */
+  
+  /* another important note that you should put  (id) in the last because its auto generated otherwise it will miss the values of other parameters */
     this.id = id;
     this.flName = fullName;
     this.department = department;
@@ -54,7 +57,7 @@ Employee.prototype.render = function () {
 // function handle(){
 //     let imag = document.createElement("img")
 //     imag.src = './assets/Captureee.png'
-//     employeesSectionEL.appendChild(imag)
+//     employeesSectionEl.appendChild(imag)
 // }
 // handle()
 
@@ -62,17 +65,19 @@ myForm.addEventListener("submit", eventHandler)
 function eventHandler(event) {
     event.preventDefault()
 
-    let image = event.target.image.value
-
     let fullName = event.target.fullName.value
     console.log(fullName)
-
+    
     let department = event.target.select.value
     console.log(department)
     let level = event.target.level.value
+    
+    let image = event.target.image.value
+    console.log(image)
 
-    let newEmployee = new Employee(image,fullName, department, level)
+    let newEmployee = new Employee(fullName, image,department, level)
     newEmployee.getRandomId(1000,1010)
+    // console.log(newEmployee)
     // employees.push(newEmployee)
     newEmployee.render()
 console.log(employees)
