@@ -12,6 +12,8 @@ let employees = []
 
 // its not mandotory to give a value to constructor param
 function Employee(fullName, department, level, image, salary, id) {
+     // very important notice : the ordering of parameters of the constructor and newEmployee in the event should be the same otherwise it will miss up the values of other parameters
+    // another note that the (id) should be put in the last because its value is got from outside the construcor otherwise it will miss up the values of other parameters as well
     this.fName = fullName;
     this.department = department;
     this.level = level;
